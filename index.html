@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div style="display: none;">
+    <svg class="cross-svg" width="20" height="20" viewBox="0 0 20 20">
+      <line x1="20" y1="0" x2="0" y2="20" stroke="#aaa" />
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#aaa" />
+    </svg>
+  </div>
+
+  <div style="height: 100px;">
+    <div id="win-panel" class="hidden">
+
+
+      <div style="display: flex; align-items: center; justify-content: center; background-color: lightgoldenrodyellow;">
+        <span style="font-weight: bold; color: tomato; font-size: 60px;">完成！</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-left: 60px;">
+    <table id="board">
+      <tbody>
+        <tr>
+          <td></td>
+          <td id="vhint"></td>
+        </tr>
+        <tr>
+          <td id="hhint"></td>
+          <td id="paintboard"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

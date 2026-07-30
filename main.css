@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+
+table {
+  /* border-collapse: separate; */
+  border-spacing: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.grid {
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+
+  width: 20px;
+  height: 20px;
+}
+
+.grid.fill {
+  background-color: #000;
+}
+.grid.fill:hover {
+  background-color: #333;
+}
+.grid:not(.fill) {
+  background-color: #fff;
+}
+.grid:not(.fill):hover {
+  background-color: #ddd;
+}
+
+#vhint {
+  display: flex;
+}
+.hint-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#hhint {
+  display: flex;
+  flex-direction: column;
+}
+.hint-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.grid:not(.cross) .cross-svg {
+  display: none;
+}
+
+.hint svg {
+  position: absolute;
+}
+
+/* border */
+#board {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+}
+.grid {
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+#paintboard {
+  border-top: 2px solid #555;
+  border-left: 2px solid #555;
+}
+#paintboard .grid:nth-child(5n),
+#paintboard .grid:last-child,
+#vhint .hint-col:nth-child(5n) .grid {
+  border-right: 2px solid #555;
+}
+#paintboard .row:nth-child(5n) .grid,
+#paintboard .row:last-child .grid,
+#hhint .hint-row:nth-child(5n) .grid {
+  border-bottom: 2px solid #555;
+}
+#hhint {
+  border-top: 2px solid #555;
+}
+#vhint {
+  border-left: 2px solid #555;
+}
+
+/* win */
+.win #paintboard svg {
+  display: none;
+}
+.win #paintboard .grid {
+  border: 0px !important;
+}
