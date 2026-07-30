@@ -174,7 +174,7 @@ function createPaintBoard() {
       gridElem.classList.add("grid");
       gridElem.appendChild(crossSvgElem.cloneNode(true));
       if (answer[row][col] === 1) {
-        gridElem.classList.add("fill");
+        // gridElem.classList.add("fill");
       }
       gridElem.addEventListener("click", (event) => {
         onClickPaintGrid(event);
